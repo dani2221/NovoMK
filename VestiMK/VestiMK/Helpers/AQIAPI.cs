@@ -13,7 +13,7 @@ namespace VestiMK.Helpers
         public async static Task<List<Datum>> GetAvailableSTations()
         {
             List<Datum> stations=new List<Datum>();
-            var url = "https://api.waqi.info/map/bounds/?token=28c01e031df543ae6d049aa42f4c9be8a2703fd4&latlng=40.842726955720,20.4631520,42.3202595078,22.952377150220";
+            var url = "https://api.waqi.info/map/bounds/?token={token}&latlng=40.842726955720,20.4631520,42.3202595078,22.952377150220";
 
             using (HttpClient client = new HttpClient())
             {
@@ -30,7 +30,7 @@ namespace VestiMK.Helpers
         public async static Task<Example> GetStationInfo(Datum st)
         {
             var splitted = st.station.name.Split(new[] { "(" }, StringSplitOptions.None)[0];
-            var url = "https://api.waqi.info/feed/"+ splitted +"/?token=28c01e031df543ae6d049aa42f4c9be8a2703fd4";
+            var url = "https://api.waqi.info/feed/"+ splitted +"/?token={token}";
             Example ex;
             using (HttpClient client = new HttpClient())
             {
@@ -44,7 +44,7 @@ namespace VestiMK.Helpers
 
         public async static Task<Akcii> GetAkcii()
         {
-            var url = "http://feeds.mse.mk/service/FreeMSEFeeds.svc/ticker/JSON/1cda207b-174c-498c-9e16-23530c6f6da6";
+            var url = "http://feeds.mse.mk/service/FreeMSEFeeds.svc/ticker/JSON/{token}";
             Akcii ak = new Akcii();
             using (HttpClient client = new HttpClient())
             {
