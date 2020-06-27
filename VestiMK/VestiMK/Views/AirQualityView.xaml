@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VestiMK.Views.AirQualityView"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <RefreshView x:Name="refresh" RefreshColor="#121212" BackgroundColor="#FF0266">
+            <ScrollView BackgroundColor="Black">
+            <StackLayout VerticalOptions="Start" BackgroundColor="Black">
+                    <SearchBar x:Name="searchBar" HorizontalOptions="FillAndExpand" PlaceholderColor="#FF0266" Placeholder="Барај" CancelButtonColor="#FF0266" BackgroundColor="#121212" TextColor="White"/>
+                <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/6510898142" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>-->
+                <StackLayout x:Name="stek" BackgroundColor="Black" VerticalOptions="Start">
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="@drawable/ic_settings" Clicked="ToolbarItem_Clicked_1"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage x:Name="tabbed"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            x:Class="VestiMK.MainPage"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:views="clr-namespace:VestiMK.Views"
+            Title="Novo MK"
+            BarTextColor="#FF0266"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="LightGray"
+            android:TabbedPage.BarSelectedItemColor="#FF0266"
+            BarBackgroundColor="#121212"
+            >
+
+    <TabbedPage.Children>
+        <NavigationPage IconImageSource="@drawable/newsIcon" Title="Вести">
+            <x:Arguments>
+                <views:News />
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Загаденост" IconImageSource="@drawable/airIcon">
+            <x:Arguments>
+                <views:AirQualityView/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Берза" IconImageSource="@drawable/stocksIcon">
+            <x:Arguments>
+                <views:StocksView />
+            </x:Arguments>
+        </NavigationPage>
+
+
+    </TabbedPage.Children>
+    <NavigationPage.TitleView>
+        <Label Text="NovoMK" FontSize="25" TextColor="White" HorizontalOptions="Start" FontFamily="{StaticResource Key=BoldFont}"/>
+    </NavigationPage.TitleView>
+</TabbedPage>

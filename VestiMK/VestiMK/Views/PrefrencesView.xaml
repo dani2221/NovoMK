@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VestiMK.Views.PrefrencesView"
+             Title="Preferences">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="Black">
+                <Frame CornerRadius="5" HasShadow="True" Margin="10" BackgroundColor="#121212">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Македонија" Grid.Column="0" Grid.Row="0" FontSize="15" TextColor="White"/>
+                        <Label Text="Свет" Grid.Column="0" Grid.Row="1" FontSize="15" TextColor="White"/>
+                        <Label Text="Економија" Grid.Column="0" Grid.Row="2" FontSize="15" TextColor="White"/>
+                        <Label Text="Спорт" Grid.Column="0" Grid.Row="3" FontSize="15" TextColor="White"/>
+                        <Label Text="Култура" Grid.Column="0" Grid.Row="4" FontSize="15" TextColor="White"/>
+
+                        <CheckBox x:Name="mk" CheckedChanged="mk_CheckedChanged" Grid.Column="1" Grid.Row="0" HorizontalOptions="End"/>
+                        <CheckBox x:Name="sv" CheckedChanged="sv_CheckedChanged" Grid.Column="1" Grid.Row="1" HorizontalOptions="End"/>
+                        <CheckBox x:Name="ek" CheckedChanged="ek_CheckedChanged" Grid.Column="1" Grid.Row="2" HorizontalOptions="End"/>
+                        <CheckBox x:Name="sp" CheckedChanged="sp_CheckedChanged" Grid.Column="1" Grid.Row="3" HorizontalOptions="End"/>
+                        <CheckBox x:Name="kl" CheckedChanged="kl_CheckedChanged" Grid.Column="1" Grid.Row="4" HorizontalOptions="End"/>
+
+                    </Grid>
+                </Frame>
+                <Frame CornerRadius="5" HasShadow="True" Margin="10" BackgroundColor="#121212">
+                <Grid>
+                    <Label Text="Сортирај AQI по локација" FontSize="15" Grid.Column="0" Grid.Row="0" TextColor="White"/>
+                    <Switch OnColor="#FF0266" x:Name="switchAQI" Toggled="switchAQI_Toggled" HorizontalOptions="End"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VestiMK.Views.News"
+             xmlns:controls="clr-namespace:MarcTron.Plugin.Controls;assembly=Plugin.MtAdmob"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <RefreshView x:Name="refresh" RefreshColor="Black" BackgroundColor="#FF0266">
+        <ScrollView BackgroundColor="Black">
+            
+            <StackLayout x:Name="fullstek">
+
+                <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/5044885189" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" x:Name="adM"/>-->
+                    <Label Text="Македонија" TextColor="#FF7595" FontSize="30" Margin="10" FontAttributes="Bold" x:Name="frameM"/>
+                    <StackLayout x:Name="MAKEDONIJA" Margin="5">
+                </StackLayout>
+
+                <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/4881874281" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="adS"/>-->
+                    <Label Text="Свет" TextColor="#ff954f" FontSize="30" Margin="10" FontAttributes="Bold" x:Name="frameS"/>
+                    <StackLayout x:Name="SVET" Margin="5,10">
+                </StackLayout>
+
+                <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/4985175438" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="adE"/>-->
+                    <Label Text="Економија" TextColor="#AF52DE" FontSize="30" Margin="10" FontAttributes="Bold" x:Name="frameE"/>
+                    <StackLayout x:Name="EKONOMIJA" Margin="5,10">
+                </StackLayout>
+
+                <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/5460458780" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="adSp"/>-->
+                    <Label Text="Спорт" TextColor="#5AC8FA" FontSize="30" Margin="10" FontAttributes="Bold" x:Name="frameSp"/>
+                    <StackLayout x:Name="SPORT" Margin="5,10">
+                    </StackLayout>
+
+
+                    <!--<controls:MTAdView PersonalizedAds="true" AdsId="ca-app-pub-6638560950207737/7615848836" HeightRequest="50" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  x:Name="adK"/>-->
+                    <Label Text="Култура" TextColor="#FFCC00" FontSize="30" Margin="10" FontAttributes="Bold" x:Name="frameK"/>
+                    <StackLayout x:Name="KULTURA" Margin="5,10">
+                </StackLayout>
+                
+                
+            </StackLayout>
+           
+        </ScrollView>
+        </RefreshView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="@drawable/ic_settings" Clicked="ToolbarItem_Clicked_1" />
+    </ContentPage.ToolbarItems>
+</ContentPage>
